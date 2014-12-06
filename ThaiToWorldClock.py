@@ -9,10 +9,7 @@
 #------------------------------------------------------------
 
 from Tkinter import *
-<<<<<<< HEAD
 from time import strftime
-=======
->>>>>>> origin/master
 
 class Gui:
     '''Make window of Tkinter'''
@@ -56,10 +53,7 @@ class Gui:
     label_kor = Label(master, text="South Korea", fg="white", bg="#27281F")
     label_uk = Label(master, text="United Kingdom", fg="white", bg="#27281F")
     label_us = Label(master, text="United States\n(Washington D.C.)", fg="white", bg="#27281F")
-<<<<<<< HEAD
     label_us_keynote = Label(master, text="Apple Keynote\n(U.S. California)", fg="white", bg="#27281F")
-=======
->>>>>>> origin/master
     #LABELS : Reset Button
     label_reset_1 = Label(master, text="-- : --", fg="white", bg="#27281F")
     label_reset_2 = Label(master, text="-- : --", fg="white", bg="#27281F")
@@ -71,11 +65,7 @@ class Gui:
     label_reset_8 = Label(master, text="-- : --", fg="white", bg="#27281F")
     label_reset_9 = Label(master, text="-- : --", fg="white", bg="#27281F")
     label_reset_10 = Label(master, text="-- : --", fg="white", bg="#27281F")
-<<<<<<< HEAD
     label_reset_11 = Label(master, text="-- : --", fg="white", bg="#27281F")    
-=======
-    
->>>>>>> origin/master
     #FLAGS : Defines Flag Label (.gif files are required)
     #Thailand Flag
     thaiimg = PhotoImage(file=".\\Images\\thailand_flag.gif")
@@ -101,11 +91,8 @@ class Gui:
     flag_uk = Label(image=ukimg, borderwidth=0)    
     usimg = PhotoImage(file=".\\Images\\10_us_flag.gif")
     flag_us = Label(image=usimg, borderwidth=0)
-<<<<<<< HEAD
     appimg = PhotoImage(file=".\\Images\\11_applekeynote.gif")
     flag_us_keynote = Label(image=appimg, borderwidth=0)
-=======
->>>>>>> origin/master
 
     #INIT : Display everything except Button
     #.Labels
@@ -113,24 +100,8 @@ class Gui:
     label_head.grid(row=0, columnspan=5)
     label_hour.grid(row=3, columnspan=20, sticky=W, padx=350)
     label_minute.grid(row=4, columnspan=100, sticky=W, padx=350)
-<<<<<<< HEAD
     #label_author.grid(row=6, column=0, columnspan=5, sticky=W, padx=5)
     #..Resets Labels
-=======
-    label_author.grid(row=6, column=0, columnspan=5, sticky=W, padx=5)
-    #..Flags
-    label_aus.grid(row=9, columnspan=5, sticky=W, padx=60, pady=0)
-    label_bra.grid(row=9, columnspan=20, sticky=W, padx=275, pady=0)
-    label_can.grid(row=9, columnspan=20, sticky=E, padx=285, pady=0)
-    label_chi.grid(row=9, columnspan=5, sticky=E, padx=85, pady=0)
-    label_egy.grid(row=13, columnspan=5, sticky=W, padx=85, pady=0)
-    label_ind.grid(row=13, columnspan=20, sticky=W, padx=305, pady=0)
-    label_jap.grid(row=13, columnspan=20, sticky=E, padx=305, pady=0)
-    label_kor.grid(row=13, columnspan=5, sticky=E, padx=50, pady=0)
-    label_uk.grid(row=17, columnspan=20, sticky=W, padx=250, pady=0)
-    label_us.grid(row=17, columnspan=20, sticky=E, padx=240, pady=0)
-    #..Resets
->>>>>>> origin/master
     label_reset_1.grid(row=10, columnspan=5, sticky=W, padx=72, pady=0)
     label_reset_2.grid(row=10, columnspan=5, sticky=W, padx=293, pady=0)
     label_reset_3.grid(row=10, columnspan=5, sticky=E, padx=293, pady=0)
@@ -164,11 +135,7 @@ class Gui:
     #Flags Images
     #Thailand Flags Image
     flag_thai.grid(row=2, column=2, pady=5)
-<<<<<<< HEAD
     #Output Flags Images
-=======
-    #Output Flags
->>>>>>> origin/master
     flag_aus.grid(row=8, columnspan=5, sticky=W, padx=75, pady=15)
     flag_bra.grid(row=8, columnspan=20, sticky=W, padx=297, pady=15)
     flag_can.grid(row=8, columnspan=40, sticky=E, padx=297, pady=15)
@@ -177,20 +144,14 @@ class Gui:
     flag_ind.grid(row=12, columnspan=40, sticky=W, padx=297, pady=15)
     flag_jap.grid(row=12, columnspan=5, sticky=E, padx=297, pady=15)
     flag_kor.grid(row=12, columnspan=20, sticky=E, padx=75, pady=15)
-<<<<<<< HEAD
     flag_uk.grid(row=16, columnspan=40, sticky=W, padx=180, pady=15)
     flag_us.grid(row=16, columnspan=100, sticky=W, padx=405, pady=15)
     flag_us_keynote.grid(row=16, columnspan=100, sticky=E, padx=180, pady=15)
-=======
-    flag_uk.grid(row=16, columnspan=40, sticky=W, padx=297, pady=15)
-    flag_us.grid(row=16, columnspan=100, sticky=E, padx=297, pady=15)
->>>>>>> origin/master
     #Make Window unresizeable
     master.resizable(0,0)
 
 class Button:
     '''Make buttons of Tkinter'''
-<<<<<<< HEAD
     
     #BUTTONS : Defines all Buttons
     #.Execute
@@ -202,37 +163,6 @@ class Button:
         
         #.Australia
         hour1 = str((hour + 4) % 24)
-=======
-    #BUTTONS : Defines all Buttons
-
-    #.Reset
-##    def reset():
-##        '''Change all output to -- : --'''
-##        #Show -- : --
-##        Gui.label_reset_1.grid(row=10, columnspan=5, sticky=W, padx=72, pady=0)
-##        Gui.label_reset_2.grid(row=10, columnspan=5, sticky=W, padx=293, pady=0)
-##        Gui.label_reset_3.grid(row=10, columnspan=5, sticky=E, padx=293, pady=0)
-##        Gui.label_reset_4.grid(row=10, columnspan=5, sticky=E, padx=72, pady=0)
-##        Gui.label_reset_5.grid(row=14, columnspan=5, sticky=W, padx=72, pady=0)
-##        Gui.label_reset_6.grid(row=14, columnspan=5, sticky=W, padx=293, pady=0)
-##        Gui.label_reset_7.grid(row=14, columnspan=5, sticky=E, padx=293, pady=0)
-##        Gui.label_reset_8.grid(row=14, columnspan=5, sticky=E, padx=72, pady=0)
-##        Gui.label_reset_9.grid(row=18, columnspan=5, sticky=W, padx=293, pady=0)
-##        Gui.label_reset_10.grid(row=18, columnspan=5, sticky=E, padx=293, pady=0)
-##        #Hide all time
-##    txtreset = "Reset"
-##    reset = Button(height=1, width=26, borderwidth=0, text=txtreset, fg="white", bg="#3C3C3C", command=reset)
-
-    #.Execute
-    def execute():
-        '''Show all time output'''
-        #Show all time
-        hour = int(Gui.input_hour.get())
-        minu = str(("0" * (2 - len(Gui.input_minute.get()))) + Gui.input_minute.get())
-        
-        #.Australia
-        hour1 = str((hour + 3) % 24)
->>>>>>> origin/master
         hour1 = ("0" * (2 - len(hour1))) + str(hour1)
         label_time_1 = Label(Gui.master, text=hour1 + " : " + str(minu), fg="white", bg="#27281F")
         #.Brazil
@@ -252,7 +182,6 @@ class Button:
         hour5 = ("0" * (2 - len(hour5))) + str(hour5)
         label_time_5 = Label(Gui.master, text=hour5 + " : " + str(minu), fg="white", bg="#27281F")
         #.India
-<<<<<<< HEAD
         hour6 = str((hour - 2) % 24)
         hour6 = ("0" * (2 - len(hour6))) + str(hour6)
         label_time_6 = Label(Gui.master, text=hour6 + " : " + str(minu), fg="white", bg="#27281F")
@@ -262,17 +191,6 @@ class Button:
         label_time_7 = Label(Gui.master, text=hour7 + " : " + str(minu), fg="white", bg="#27281F")
         #.South Korea
         hour8 = str((hour + 2) % 24)
-=======
-        hour6 = str((hour + 1) % 24)
-        hour6 = ("0" * (2 - len(hour6))) + str(hour6)
-        label_time_6 = Label(Gui.master, text=hour6 + " : " + str(minu), fg="white", bg="#27281F")
-        #.Japan
-        hour7 = str((hour - 2) % 24)
-        hour7 = ("0" * (2 - len(hour7))) + str(hour7)
-        label_time_7 = Label(Gui.master, text=hour7 + " : " + str(minu), fg="white", bg="#27281F")
-        #.South Korea
-        hour8 = str((hour - 7) % 24)
->>>>>>> origin/master
         hour8 = ("0" * (2 - len(hour8))) + str(hour8)
         label_time_8 = Label(Gui.master, text=hour8 + " : " + str(minu), fg="white", bg="#27281F")
         #.United Kingdom
@@ -283,15 +201,11 @@ class Button:
         hour10 = str((hour - 12) % 24)
         hour10 = ("0" * (2 - len(hour10))) + str(hour10)
         label_time_10 = Label(Gui.master, text=hour10 + " : " + str(minu), fg="white", bg="#27281F")
-<<<<<<< HEAD
         #.United States (Apple Keynote)
         hour11 = str((hour - 15) % 24)
         hour11 = ("0" * (2 - len(hour11))) + str(hour11)
         label_time_11 = Label(Gui.master, text=hour11 + " : " + str(minu), fg="white", bg="#27281F")
         
-=======
-
->>>>>>> origin/master
         label_time_1.grid(row=10, columnspan=5, sticky=W, padx=72, pady=0)
         label_time_2.grid(row=10, columnspan=5, sticky=W, padx=293, pady=0)
         label_time_3.grid(row=10, columnspan=5, sticky=E, padx=293, pady=0)
@@ -300,14 +214,9 @@ class Button:
         label_time_6.grid(row=14, columnspan=5, sticky=W, padx=293, pady=0)
         label_time_7.grid(row=14, columnspan=5, sticky=E, padx=293, pady=0)
         label_time_8.grid(row=14, columnspan=5, sticky=E, padx=72, pady=0)
-<<<<<<< HEAD
         label_time_9.grid(row=18, columnspan=5, sticky=W, padx=178, pady=0)
         label_time_10.grid(row=18, columnspan=5, sticky=W, padx=400, pady=0)
         label_time_11.grid(row=18, columnspan=5, sticky=E, padx=178, pady=0)
-=======
-        label_time_9.grid(row=18, columnspan=5, sticky=W, padx=293, pady=0)
-        label_time_10.grid(row=18, columnspan=5, sticky=E, padx=293, pady=0)
->>>>>>> origin/master
         #Hide -- : --
         Gui.label_reset_1.grid_forget()
         Gui.label_reset_2.grid_forget()
@@ -319,7 +228,6 @@ class Button:
         Gui.label_reset_8.grid_forget()
         Gui.label_reset_9.grid_forget()
         Gui.label_reset_10.grid_forget()
-<<<<<<< HEAD
     txtexecnow = "Convert using current time"
     executenow = Button(height=1, width=41, borderwidth=0, text=txtexecnow, fg="white", bg="#3CB371", command=execute_current)
     
@@ -397,30 +305,11 @@ class Button:
         Gui.label_reset_8.grid_forget()
         Gui.label_reset_9.grid_forget()
         Gui.label_reset_10.grid_forget()
-=======
-    txtexec = "Convert Time"
-    execute = Button(height=1, width=32, borderwidth=0, text=txtexec, fg="white", bg="#C80000", command=execute)
-    
-    #.Close
-    def close():
-        Gui.master.quit()
-    txtclos = "Close"
-    close = Button(height=1, width=25, borderwidth=0, text=txtclos, fg="white", bg="#3C3C3C", command=close)
->>>>>>> origin/master
 
     txtexec = "Convert using input time"
     execute = Button(height=1, width=41, borderwidth=0, text=txtexec, fg="white", bg="#C80000", command=execute_withset)   
     #INITS : Display all Button
-<<<<<<< HEAD
     executenow.grid(row=6, columnspan=5, sticky=W, pady=0)
     execute.grid(row=6, columnspan=300, sticky=E, padx=0)
-=======
-##    reset.grid(row=6, column=0, columnspan=5, sticky=W, pady=0)
-
-    
-    execute.grid(row=6, columnspan=20, sticky=W, padx=260, pady=0)
-    close.grid(row=6, column=0, columnspan=5, sticky=E, pady=0)
-
->>>>>>> origin/master
 
 Gui.master.mainloop()
