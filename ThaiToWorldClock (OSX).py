@@ -10,6 +10,7 @@
 
 from Tkinter import *
 from time import strftime
+#test commit
 
 class Gui:
     '''Make window of Tkinter'''
