@@ -68,30 +68,30 @@ class Gui:
     label_reset_11 = Label(master, text="-- : --", fg="white", bg="#27281F")    
     #FLAGS : Defines Flag Label (.gif files are required)
     #Thailand Flag
-    thaiimg = PhotoImage(file=".\\Images\\thailand_flag.gif")
+    thaiimg = PhotoImage(file=".//Images//thailand_flag.gif")
     flag_thai = Label(image=thaiimg, borderwidth=0, bg="#464646")
     #Output Flags
-    ausimg = PhotoImage(file=".\\Images\\1_aus_flag.gif")
+    ausimg = PhotoImage(file=".//Images//1_aus_flag.gif")
     flag_aus = Label(image=ausimg, borderwidth=0)
-    braimg = PhotoImage(file=".\\Images\\2_brazil_flag.gif")
+    braimg = PhotoImage(file=".//Images//2_brazil_flag.gif")
     flag_bra = Label(image=braimg, borderwidth=0)
-    canimg = PhotoImage(file=".\\Images\\3_can_flag.gif")
+    canimg = PhotoImage(file=".//Images//3_can_flag.gif")
     flag_can = Label(image=canimg, borderwidth=0)
-    chiimg = PhotoImage(file=".\\Images\\4_china_flag.gif")
+    chiimg = PhotoImage(file=".//Images//4_china_flag.gif")
     flag_chi = Label(image=chiimg, borderwidth=0)
-    egyimg = PhotoImage(file=".\\Images\\5_egypt_flag.gif")
+    egyimg = PhotoImage(file=".//Images//5_egypt_flag.gif")
     flag_egy = Label(image=egyimg, borderwidth=0)
-    indimg = PhotoImage(file=".\\Images\\6_india_flag.gif")
+    indimg = PhotoImage(file=".//Images//6_india_flag.gif")
     flag_ind = Label(image=indimg, borderwidth=0)
-    japimg = PhotoImage(file=".\\Images\\7_japan_flag.gif")
+    japimg = PhotoImage(file=".//Images//7_japan_flag.gif")
     flag_jap = Label(image=japimg, borderwidth=0)
-    korimg = PhotoImage(file=".\\Images\\8_sthkorea_flag.gif")
+    korimg = PhotoImage(file=".//Images//8_sthkorea_flag.gif")
     flag_kor = Label(image=korimg, borderwidth=0)
-    ukimg = PhotoImage(file=".\\Images\\9_uk_flag.gif")
+    ukimg = PhotoImage(file=".//Images//9_uk_flag.gif")
     flag_uk = Label(image=ukimg, borderwidth=0)    
-    usimg = PhotoImage(file=".\\Images\\10_us_flag.gif")
+    usimg = PhotoImage(file=".//Images//10_us_flag.gif")
     flag_us = Label(image=usimg, borderwidth=0)
-    appimg = PhotoImage(file=".\\Images\\11_applekeynote.gif")
+    appimg = PhotoImage(file=".//Images//11_applekeynote.gif")
     flag_us_keynote = Label(image=appimg, borderwidth=0)
 
     #INIT : Display everything except Button
@@ -159,7 +159,7 @@ class Button:
         '''Show all time output using current time'''
         #Get current time
         hour = int(strftime("%H"))
-        minu = int(strftime("%M"))
+        minu = str(("0" * (2 - len(strftime("%M")))) + strftime("%M"))
         
         #.Australia
         hour1 = str((hour + 4) % 24)
@@ -307,7 +307,8 @@ class Button:
         Gui.label_reset_10.grid_forget()
 
     txtexec = "Convert using input time"
-    execute = Button(height=1, width=41, borderwidth=0, text=txtexec, fg="white", bg="#C80000", command=execute_withset)   
+    execute = Button(height=1, width=41, borderwidth=0, text=txtexec, fg="white", bg="#C80000", command=execute_withset)
+    
     #INITS : Display all Button
     executenow.grid(row=6, columnspan=5, sticky=W, pady=0)
     execute.grid(row=6, columnspan=300, sticky=E, padx=0)
