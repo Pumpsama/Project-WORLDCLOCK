@@ -11,15 +11,7 @@
 
 from Tkinter import *
 from time import strftime
-<<<<<<< HEAD
 from os import system
-=======
-<<<<<<< HEAD
-from subprocess import call
-=======
-#test commit
->>>>>>> origin/master
->>>>>>> origin/master
 
 #Test If OSX or not, else get error.
 try:
@@ -168,7 +160,6 @@ else:
         flag_us.grid(row=16, columnspan=100, sticky=W, padx=405, pady=15)
         flag_us_keynote.grid(row=16, columnspan=100, sticky=E, padx=180, pady=15)
 
-<<<<<<< HEAD
     class Button:
         '''Make buttons of Tkinter'''
         #BUTTONS : Defines all Buttons
@@ -254,110 +245,6 @@ else:
             
         txtexecnow = "Convert using current time"
         executenow = Button(height=1, width=52, borderwidth=1, text=txtexecnow, fg="#27281F", bg="White", command=execute_current)
-=======
-class Button:
-    '''Make buttons of Tkinter'''
-<<<<<<< HEAD
-
-    #Play Sound.
-    audio_file = ".//Sound//convert_mac.wav"
-    call(["afplay", audio_file])
-=======
->>>>>>> origin/master
-    
-    #BUTTONS : Defines all Buttons
-    #.Execute
-    def execute_current():
-        '''Show all time output using current time'''
-        #Get current time
-        hour = int(strftime("%H"))
-        minu = str(("0" * (2 - len(strftime("%M")))) + strftime("%M"))
-        
-        #.Australia
-        hour1 = str((hour + 4) % 24)
-        hour1 = ("0" * (2 - len(hour1))) + str(hour1)
-        label_time_1 = Label(Gui.master, text=hour1 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.Brazil
-        hour2 = str((hour - 9) % 24)
-        hour2 = ("0" * (2 - len(hour2))) + str(hour2)
-        label_time_2 = Label(Gui.master, text=hour2 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.Canada
-        hour3 = str((hour - 12) % 24)
-        hour3 = ("0" * (2 - len(hour3))) + str(hour3)
-        label_time_3 = Label(Gui.master, text=hour3 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.China
-        hour4 = str((hour + 1) % 24)
-        hour4 = ("0" * (2 - len(hour4))) + str(hour4)
-        label_time_4 = Label(Gui.master, text=hour4 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.Egypt
-        hour5 = str((hour - 5) % 24)
-        hour5 = ("0" * (2 - len(hour5))) + str(hour5)
-        label_time_5 = Label(Gui.master, text=hour5 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.India
-        hour6 = str((hour - 2) % 24)
-        hour6 = ("0" * (2 - len(hour6))) + str(hour6)
-        label_time_6 = Label(Gui.master, text=hour6 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.Japan
-        hour7 = str((hour + 2) % 24)
-        hour7 = ("0" * (2 - len(hour7))) + str(hour7)
-        label_time_7 = Label(Gui.master, text=hour7 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.South Korea
-        hour8 = str((hour + 2) % 24)
-        hour8 = ("0" * (2 - len(hour8))) + str(hour8)
-        label_time_8 = Label(Gui.master, text=hour8 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.United Kingdom
-        hour9 = str((hour - 7) % 24)
-        hour9 = ("0" * (2 - len(hour9))) + str(hour9)
-        label_time_9 = Label(Gui.master, text=hour9 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")        
-        #.United States
-        hour10 = str((hour - 12) % 24)
-        hour10 = ("0" * (2 - len(hour10))) + str(hour10)
-        label_time_10 = Label(Gui.master, text=hour10 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        #.United States (Apple Keynote)
-        hour11 = str((hour - 15) % 24)
-        hour11 = ("0" * (2 - len(hour11))) + str(hour11)
-        label_time_11 = Label(Gui.master, text=hour11 + " : " + str(minu), fg="#27281F", bg="#FFFFFF")
-        
-        label_time_1.grid(row=10, columnspan=5, sticky=W, padx=82, pady=0)
-        label_time_2.grid(row=10, columnspan=5, sticky=W, padx=303, pady=0)
-        label_time_3.grid(row=10, columnspan=5, sticky=E, padx=303, pady=0)
-        label_time_4.grid(row=10, columnspan=5, sticky=E, padx=82, pady=0)
-        label_time_5.grid(row=14, columnspan=5, sticky=W, padx=82, pady=0)
-        label_time_6.grid(row=14, columnspan=5, sticky=W, padx=303, pady=0)
-        label_time_7.grid(row=14, columnspan=5, sticky=E, padx=303, pady=0)
-        label_time_8.grid(row=14, columnspan=5, sticky=E, padx=82, pady=0)
-        label_time_9.grid(row=18, columnspan=5, sticky=W, padx=185, pady=0)
-        label_time_10.grid(row=18, columnspan=5, sticky=W, padx=410, pady=0)
-        label_time_11.grid(row=18, columnspan=5, sticky=E, padx=188, pady=0)
-        #Hide -- : --
-        Gui.label_reset_1.grid_forget()
-        Gui.label_reset_2.grid_forget()
-        Gui.label_reset_3.grid_forget()
-        Gui.label_reset_4.grid_forget()
-        Gui.label_reset_5.grid_forget()
-        Gui.label_reset_6.grid_forget()
-        Gui.label_reset_7.grid_forget()
-        Gui.label_reset_8.grid_forget()
-        Gui.label_reset_9.grid_forget()
-        Gui.label_reset_10.grid_forget()
-    txtexecnow = "Convert using current time"
-    executenow = Button(height=1, width=52, borderwidth=1, text=txtexecnow, fg="#27281F", bg="White", command=execute_current)
-    
-    #.Execute with time input
-    def execute_withset():
-        '''Show all time output using input time'''
-<<<<<<< HEAD
-
-        #Play Sound.
-        audio_file = ".//Sound//convert_mac.wav"
-        call(["afplay", audio_file])
-    
-=======
->>>>>>> origin/master
-        #Get time from inputs
-        hour = int(Gui.input_hour.get())
-        minu = str(("0" * (2 - len(Gui.input_minute.get()))) + Gui.input_minute.get())
->>>>>>> origin/master
         
         #.Execute with time input
         def execute_withset():
