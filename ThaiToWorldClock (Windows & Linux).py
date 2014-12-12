@@ -10,7 +10,10 @@
 
 from Tkinter import *
 from time import strftime
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
 from winsound import PlaySound, SND_FILENAME
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
 
 class Gui:
     '''Make window of Tkinter'''
@@ -158,7 +161,10 @@ class Button:
     #.Execute
     def execute_current():
         '''Show all time output using current time'''
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
         
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
         #Get current time
         hour = int(strftime("%H"))
         minu = str(("0" * (2 - len(strftime("%M")))) + strftime("%M"))
@@ -230,17 +236,23 @@ class Button:
         Gui.label_reset_8.grid_forget()
         Gui.label_reset_9.grid_forget()
         Gui.label_reset_10.grid_forget()
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
 
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
     txtexecnow = "Convert using current time"
     executenow = Button(height=1, width=41, borderwidth=0, text=txtexecnow, fg="white", bg="#3CB371", command=execute_current)
     
     #.Execute with time input
     def execute_withset():
         '''Show all time output using input time'''
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
         
         #Play Sound
         PlaySound('.//Sound//convert_win.wav', SND_FILENAME)
         
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
         #Get time from inputs
         hour = int(Gui.input_hour.get())
         minu = str(("0" * (2 - len(Gui.input_minute.get()))) + Gui.input_minute.get())

@@ -10,7 +10,11 @@
 
 from Tkinter import *
 from time import strftime
+<<<<<<< HEAD
 from subprocess import call
+=======
+#test commit
+>>>>>>> origin/master
 
 class Gui:
     '''Make window of Tkinter'''
@@ -153,10 +157,13 @@ class Gui:
 
 class Button:
     '''Make buttons of Tkinter'''
+<<<<<<< HEAD
 
     #Play Sound.
     audio_file = ".//Sound//convert_mac.wav"
     call(["afplay", audio_file])
+=======
+>>>>>>> origin/master
     
     #BUTTONS : Defines all Buttons
     #.Execute
@@ -239,11 +246,14 @@ class Button:
     #.Execute with time input
     def execute_withset():
         '''Show all time output using input time'''
+<<<<<<< HEAD
 
         #Play Sound.
         audio_file = ".//Sound//convert_mac.wav"
         call(["afplay", audio_file])
     
+=======
+>>>>>>> origin/master
         #Get time from inputs
         hour = int(Gui.input_hour.get())
         minu = str(("0" * (2 - len(Gui.input_minute.get()))) + Gui.input_minute.get())
