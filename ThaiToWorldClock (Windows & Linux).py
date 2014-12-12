@@ -11,6 +11,10 @@
 
 from Tkinter import *
 from time import strftime
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
+from winsound import PlaySound, SND_FILENAME
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
 
 #Get convert sound if using windows.
 #Linux run perfectly, just without fancy sounds.
@@ -41,6 +45,7 @@ except ImportError:
         line2 = Frame(height=2, width=900, bg="Red")
         line3 = Frame(height=2, width=900, bg="Red")
 
+<<<<<<< HEAD
         #LABEL1 : Defines Text Label "Thai to World Clock"
         txthead = "Thai Clock to World Clocks"
         label_head = Label(master, text=txthead, fg="Red", bg="#27281F")    
@@ -251,6 +256,110 @@ except ImportError:
 
         txtexecnow = "Convert using current time"
         executenow = Button(height=1, width=41, borderwidth=0, text=txtexecnow, fg="white", bg="#3CB371", command=execute_current)
+=======
+class Button:
+    '''Make buttons of Tkinter'''
+    
+    #BUTTONS : Defines all Buttons
+    #.Execute
+    def execute_current():
+        '''Show all time output using current time'''
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
+        
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
+        #Get current time
+        hour = int(strftime("%H"))
+        minu = str(("0" * (2 - len(strftime("%M")))) + strftime("%M"))
+        
+        #.Australia
+        hour1 = str((hour + 4) % 24)
+        hour1 = ("0" * (2 - len(hour1))) + str(hour1)
+        label_time_1 = Label(Gui.master, text=hour1 + " : " + str(minu), fg="white", bg="#27281F")
+        #.Brazil
+        hour2 = str((hour - 9) % 24)
+        hour2 = ("0" * (2 - len(hour2))) + str(hour2)
+        label_time_2 = Label(Gui.master, text=hour2 + " : " + str(minu), fg="white", bg="#27281F")
+        #.Canada
+        hour3 = str((hour - 12) % 24)
+        hour3 = ("0" * (2 - len(hour3))) + str(hour3)
+        label_time_3 = Label(Gui.master, text=hour3 + " : " + str(minu), fg="white", bg="#27281F")
+        #.China
+        hour4 = str((hour + 1) % 24)
+        hour4 = ("0" * (2 - len(hour4))) + str(hour4)
+        label_time_4 = Label(Gui.master, text=hour4 + " : " + str(minu), fg="white", bg="#27281F")
+        #.Egypt
+        hour5 = str((hour - 5) % 24)
+        hour5 = ("0" * (2 - len(hour5))) + str(hour5)
+        label_time_5 = Label(Gui.master, text=hour5 + " : " + str(minu), fg="white", bg="#27281F")
+        #.India
+        hour6 = str((hour - 2) % 24)
+        hour6 = ("0" * (2 - len(hour6))) + str(hour6)
+        label_time_6 = Label(Gui.master, text=hour6 + " : " + str(minu), fg="white", bg="#27281F")
+        #.Japan
+        hour7 = str((hour + 2) % 24)
+        hour7 = ("0" * (2 - len(hour7))) + str(hour7)
+        label_time_7 = Label(Gui.master, text=hour7 + " : " + str(minu), fg="white", bg="#27281F")
+        #.South Korea
+        hour8 = str((hour + 2) % 24)
+        hour8 = ("0" * (2 - len(hour8))) + str(hour8)
+        label_time_8 = Label(Gui.master, text=hour8 + " : " + str(minu), fg="white", bg="#27281F")
+        #.United Kingdom
+        hour9 = str((hour - 7) % 24)
+        hour9 = ("0" * (2 - len(hour9))) + str(hour9)
+        label_time_9 = Label(Gui.master, text=hour9 + " : " + str(minu), fg="white", bg="#27281F")        
+        #.United States
+        hour10 = str((hour - 12) % 24)
+        hour10 = ("0" * (2 - len(hour10))) + str(hour10)
+        label_time_10 = Label(Gui.master, text=hour10 + " : " + str(minu), fg="white", bg="#27281F")
+        #.United States (Apple Keynote)
+        hour11 = str((hour - 15) % 24)
+        hour11 = ("0" * (2 - len(hour11))) + str(hour11)
+        label_time_11 = Label(Gui.master, text=hour11 + " : " + str(minu), fg="white", bg="#27281F")
+        
+        label_time_1.grid(row=10, columnspan=5, sticky=W, padx=72, pady=0)
+        label_time_2.grid(row=10, columnspan=5, sticky=W, padx=293, pady=0)
+        label_time_3.grid(row=10, columnspan=5, sticky=E, padx=293, pady=0)
+        label_time_4.grid(row=10, columnspan=5, sticky=E, padx=72, pady=0)
+        label_time_5.grid(row=14, columnspan=5, sticky=W, padx=72, pady=0)
+        label_time_6.grid(row=14, columnspan=5, sticky=W, padx=293, pady=0)
+        label_time_7.grid(row=14, columnspan=5, sticky=E, padx=293, pady=0)
+        label_time_8.grid(row=14, columnspan=5, sticky=E, padx=72, pady=0)
+        label_time_9.grid(row=18, columnspan=5, sticky=W, padx=178, pady=0)
+        label_time_10.grid(row=18, columnspan=5, sticky=W, padx=400, pady=0)
+        label_time_11.grid(row=18, columnspan=5, sticky=E, padx=178, pady=0)
+        #Hide -- : --
+        Gui.label_reset_1.grid_forget()
+        Gui.label_reset_2.grid_forget()
+        Gui.label_reset_3.grid_forget()
+        Gui.label_reset_4.grid_forget()
+        Gui.label_reset_5.grid_forget()
+        Gui.label_reset_6.grid_forget()
+        Gui.label_reset_7.grid_forget()
+        Gui.label_reset_8.grid_forget()
+        Gui.label_reset_9.grid_forget()
+        Gui.label_reset_10.grid_forget()
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
+
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
+    txtexecnow = "Convert using current time"
+    executenow = Button(height=1, width=41, borderwidth=0, text=txtexecnow, fg="white", bg="#3CB371", command=execute_current)
+    
+    #.Execute with time input
+    def execute_withset():
+        '''Show all time output using input time'''
+<<<<<<< HEAD:ThaiToWorldClock (Windows & Linux).py
+        
+        #Play Sound
+        PlaySound('.//Sound//convert_win.wav', SND_FILENAME)
+        
+=======
+>>>>>>> origin/master:ThaiToWorldClock (Windows & Linux).py
+        #Get time from inputs
+        hour = int(Gui.input_hour.get())
+        minu = str(("0" * (2 - len(Gui.input_minute.get()))) + Gui.input_minute.get())
+>>>>>>> origin/master
         
         #.Execute with time input
         def execute_withset():
