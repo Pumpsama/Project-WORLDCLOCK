@@ -6,7 +6,7 @@
 #Author     : Pumpsama and Patiparn
 #UI         : Tkinter
 #GIT        : https://github.com/Pumpsama
-#Repository : https://github.com/Pumpsama/Thai-to-World-Clock
+#Repository : https://github.com/Pumpsama/Project-WORLDCLOCK
 #------------------------------------------------------------
 
 from Tkinter import *
