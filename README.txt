@@ -11,7 +11,7 @@ The first function is calculate by use your current time by using
 strftime module, the second is calculate by using input time.
 
 Available in 2 Version
-• Windows Version \ Also supported on Linux Ubuntu (Tested on WIndows 8.1 and Ubuntu 14.04)
+• Windows Version \ Also supported on Linux Ubuntu (Tested on Windows 8.1 and Ubuntu 14.04)
 • OSX Version (Tested on OSX Yosemite 10.10.1)
 --------------------------------------------------------------------
 
